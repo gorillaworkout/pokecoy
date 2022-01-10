@@ -1,15 +1,11 @@
 import React, { useEffect ,useState} from 'react'
 import '../styles/Home.scss'
-import axios from 'axios'
-import {Link,NavLink} from 'react-router-dom'
-// import LogoPokemon from '../Assets/pokelogo.svg'
-import {useDispatch,useSelector} from 'react-redux'
+import {useSelector} from 'react-redux'
 import { FullPageLoading } from '../Components/Loading/Loading'
 import Header from '../Components/Header/Header'
 import ReactPaginate from 'react-paginate';
 import Card from '../Components/Card/Card'
 export default function Home(){
-    const dispatch = useDispatch()
     const Product = useSelector(state=>state.Product)
     // console.log(Product)
     const [isLoading,setIsLoading]=useState(true)
@@ -20,14 +16,11 @@ export default function Home(){
     
      const [offset,setOffset]=useState(0)
      const [perPage,setPerPage]=useState(10)
-     const [currentPage,setCurrentPage]=useState(0)
+    //  const [currentPage,setCurrentPage]=useState(0)
      const [slicePokemon,setSlicePokemon]=useState([])
      const [pageCount,setPageCount]=useState(0)
-     const [dataRenderSlice,setDataRenderSlice]=useState([])
-     const [prevRender,setPrevRender]=useState([])
+    //  const [dataRenderSlice,setDataRenderSlice]=useState([])
 
-     const [onRenderItem,setOnRenderItem]=useState(false)
-   
 
     
     // PAGINATION
@@ -64,7 +57,7 @@ export default function Home(){
         const selectedPage= e.selected
         const offset = selectedPage * perPage
         console.log(selectedPage)
-        setCurrentPage(selectedPage)
+        // setCurrentPage(selectedPage)
         setOffset(offset)
         pagination()
         setTimeout(()=>{
@@ -89,15 +82,7 @@ export default function Home(){
         })
     }
 
-    if(onRenderItem){
-        return (
-            <>
-                <div className='d-flex justify-content-center align-items-center' style={{height:"100vh", width:"100vw"}}>
-                    {FullPageLoading(isLoading,100,'#0095DA')}
-                </div>
-            </>
-        )
-    }
+ 
 
     if(isLoading){
         return (

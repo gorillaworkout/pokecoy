@@ -17,20 +17,15 @@ export default function Catching(){
     const {pokemon} = useParams()
     const [isLoading,setIsLoading]=useState(true)
     const [isCatching,setIsCatching]= useState(false)
-    const [CartPokedex,setCartPokedex]=useState(JSON.parse(localStorage.getItem('pokebag')))
-    const [allPokemonRedux,setAllPokemonRedux]=useState(Product.allPokemon)
+    
+    
     
     const [onCatching,setOnCatching]=useState(false)
-    // console.log(Product.allPokemon)
-    // console.log(allPokemonRedux)
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const catchingPokemon=()=>{
         setOnCatching(true)
         var allPokemonArray = Product.allPokemon
-        // console.log(allPokemonArray)
-        // setAllPokemonRedux(Product.allPokemon)
-        var cart = JSON.parse(localStorage.getItem('pokebag'))
-        // console.log(cart)
         let result = Math.floor(Math.random() * 2) + 0; 
         setTimeout(()=>{
             if(result === 1) {
@@ -39,8 +34,6 @@ export default function Catching(){
                 })
                 allPokemonArray[findIndex].catching = true
 
-                console.log(allPokemonArray)
-                console.log(findIndex)
                 setIsCatching(true)
                 setIsLoading(false)
                 setOnCatching(false)
@@ -91,7 +84,7 @@ export default function Catching(){
         <>
             <div className="box-container-catching">
                 <Header/>
-
+            
                 {
                     isCatching ? 
                     <div className="box-catching">

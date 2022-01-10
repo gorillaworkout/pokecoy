@@ -1,20 +1,17 @@
 import React, { useEffect,useState } from 'react'
 import '../../styles/Detail.scss'
 import Header from '../../Components/Header/Header'
-import BagPokemon from '../../Assets/bag.png'
 import axios from 'axios'
 import {useParams} from 'react-router-dom'
 import { FullPageLoading } from '../../Components/Loading/Loading'
 import Pokeball from '../../Assets/pokeball.png'
-import {Link,NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import SmallCard from '../../Components/Card/SmallCard'
 import TypeCard from '../../Components/Card/TypeCard'
 export default function Detail(){
     const { pokemon } = useParams();
     const [isLoading,setIsLoading]=useState(true)
     const [dataPokemon,setDataPokemon]=useState([])
-    console.log(dataPokemon)
-    console.log(pokemon)
 
     useEffect(()=>{
         const fetchingData=()=>{
@@ -109,9 +106,6 @@ export default function Detail(){
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="box-catching-pokemon">
-                        
                 </div>
             </div>
         </>

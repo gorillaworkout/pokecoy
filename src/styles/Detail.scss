@@ -16,6 +16,7 @@ p{
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        
         .body-left{
             padding-top:10px;
             width:20%;
@@ -29,6 +30,7 @@ p{
             @include tablet {
                 width:30%;
             }
+           
 
             .img-box-pokedex{
                 width:90%;
@@ -228,7 +230,7 @@ p{
                 align-items: center;
                 flex-direction: column;
                 padding-top:20px;
-                overflow-x:scroll;
+                
                 @include tablet {
                     width:70%;
                 }
@@ -250,6 +252,7 @@ p{
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
+                    overflow-x:scroll;
                     // justify-content: center;
                     // align-items: center;
                     // align-items: center;

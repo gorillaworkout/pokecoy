@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import '../../styles/Header.scss'
 import LogoPokemon from '../../Assets/pokelogonew.png'
 import BagPokemon from '../../Assets/bag.png'
-import {Link,NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 
 
