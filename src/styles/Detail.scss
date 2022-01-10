@@ -127,15 +127,18 @@ p{
                 @include mobile450{
                     height:15%;
                     p{
-                        font-size:16px;
+                        font-size:0.7em !important;
                     }
                 }
                 .box-pokeball{
                     width:100%;
                     height:70%;
                     padding:10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     img{
-                        width:100%;
+                        width:60%;
                         height:100%;
                     }
                 }
