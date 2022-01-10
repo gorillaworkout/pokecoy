@@ -7,8 +7,8 @@ import {useParams} from 'react-router-dom'
 import { FullPageLoading } from '../../Components/Loading/Loading'
 import Pokeball from '../../Assets/pokeball.png'
 import {Link,NavLink} from 'react-router-dom'
-
-
+import SmallCard from '../../Components/Card/SmallCard'
+import TypeCard from '../../Components/Card/TypeCard'
 export default function Detail(){
     const { pokemon } = useParams();
     const [isLoading,setIsLoading]=useState(true)
@@ -34,13 +34,13 @@ export default function Detail(){
 
 
     const renderType=()=>{
-        console.log(dataPokemon)
         return dataPokemon.types.map((val,index)=>{
-            console.log(val)
             return (
-                <div className="type-pokemon-card">
-                    <p>{val.type.name}</p>
-                </div>
+                <TypeCard
+                    arr={{
+                        name:val.type.name
+                    }}
+                />
             )
         })
     }    
@@ -48,18 +48,19 @@ export default function Detail(){
     const renderMoves=()=>{
         return dataPokemon.moves.map((val,index)=>{
             return (
-                <div className="small-card-information">
-                    <p>{val.move.name}</p>
-                </div>
+                <SmallCard arr={{
+                    name:val.move.name
+                }}/>
             )
         })
     }
     const renderAbility=()=>{
         return dataPokemon.abilities.map((val,index)=>{
             return (
-                <div className="small-card-information">
-                    <p>{val.ability.name}</p>
-                </div>
+                <SmallCard arr={{
+                    name:val.ability.name
+                }}/>
+              
             )
         })
     }

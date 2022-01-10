@@ -150,7 +150,7 @@ p{
             height:100%;
             display: flex;
             justify-content: center;
-            align-items: center;
+            // align-items: center;
             padding:10px;
             @include tablet {
                 width:70%;
@@ -228,8 +228,12 @@ p{
                 align-items: center;
                 flex-direction: column;
                 padding-top:20px;
+                overflow-x:scroll;
                 @include tablet {
                     width:70%;
+                }
+                @include mobile450{
+                    height:70%;
                 }
                 .bold-item{
                     color:#ea4208;
