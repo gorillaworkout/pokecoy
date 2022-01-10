@@ -15,7 +15,7 @@
         width:98%;
     }
     .img-box-logo{
-        width:15%;
+        // width:15%;
         height:80%;
         position:relative;
         left:20px;
@@ -26,16 +26,16 @@
         //     height:80%;
         // }
         img{
-            width:100%;
+            // width:100%;
             height:100%;
         }
         @include mobile450{
-            width:25%;
+            // width:25%;
         }
         // border:1px solid green
     }
     .img-box-bag{
-        width:30%;
+        // width:30%;
         height:80%;
         // border:1px solid green;
         display: flex;
@@ -44,11 +44,11 @@
         position:relative;
         right:20px;
         img{
-            width:100px;
+            // width:100px;
             height:100%;
         }
         @include mobile450 {
-            width:20%;
+            // width:20%;
             height:70%;
         }
     }
