@@ -1,0 +1,77 @@
+@import 'media_queries';
+
+.header-home{
+    width:100%;
+    height:100px;
+    min-height:100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border:1px solid blue;
+    background-color: #ffffff;
+    box-shadow:rgb(49 53 59 / 12%) 0px 1px 6px 0px;
+    /* padding:10px; */
+    @include mobile450{
+        width:98%;
+    }
+    .img-box-logo{
+        width:15%;
+        height:80%;
+        position:relative;
+        left:20px;
+        // border:1px solid black;
+
+        // @include tablet {
+        //     width:15%;
+        //     height:80%;
+        // }
+        img{
+            width:100%;
+            height:100%;
+        }
+        @include mobile450{
+            width:25%;
+        }
+        // border:1px solid green
+    }
+    .img-box-bag{
+        width:30%;
+        height:80%;
+        // border:1px solid green;
+        display: flex;
+        padding-right:10px;
+        justify-content: flex-end;
+        position:relative;
+        right:20px;
+        img{
+            width:100px;
+            height:100%;
+        }
+        @include mobile450 {
+            width:20%;
+            height:70%;
+        }
+    }
+    .logo-pokemon-box{
+        width:20%;
+        height: 100%;
+        // border:1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        
+    }
+    .pokemon-bag {
+        width:80%;
+        height:100%;
+        // border:1px solid pink;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right:10px;
+    
+        
+    }
+    
+}

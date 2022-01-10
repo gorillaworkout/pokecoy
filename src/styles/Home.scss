@@ -1,0 +1,88 @@
+@import '../styles/media_queries.scss';
+
+.box-container-home{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    // background-color:#ea4208;
+    .body-home{
+        width:100%;
+        height:100%;
+        min-height:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // border:1px solid black;
+        padding:15px;
+        
+        // background-color: red;
+        
+        .box-render-card-pokedex {
+            width:100%;
+            height:100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding:10px;
+            overflow-x: scroll;
+            /* background-color: red; */
+            
+        }
+    }
+
+    .body-pagination{
+        height:100px;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .pagination {
+            margin: 15px auto;
+            display: flex;
+            list-style: none;
+            outline: none;
+    
+            .active > a {
+                background-color: #74b9ff ;
+                border-color: #74b9ff ;
+                color: #fff;
+            }
+            li > a {
+                border: 1px solid #74b9ff ;
+                padding: 5px 10px;
+                outline: none;
+                cursor: pointer;
+    
+            }
+            .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+                background-color: #74b9ff ;
+                border-color: #74b9ff;
+                outline: none ;
+            }
+            li > a , .pagination > li > span{
+                color: #74b9ff
+            }
+            li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span { 
+                border-radius: unset
+            }
+    
+    
+          }
+    }
+
+ 
+
+}
+
+
+ 
+
+ 
+
+   
+
